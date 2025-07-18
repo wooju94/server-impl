@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.koreait.restapi.mapper.MemberMapper">
+
+    <insert id="insertMember" parameterType="com.koreait.restapi.dto.MemberDTO">
+        INSERT INTO member (username, password, email)
+        VALUES (#{username}, #{password}, #{email});
+    </insert>
+
+    <select id="findByUsername" parameterType="String" resultType="com.koreait.restapi.dto.MemberDTO">
+        SELECT * FROM member WHERE username = #{username};
+    </select>
+
+    <!-- 추가: id로 회원 조회 -->
+    <select id="findById" parameterType="int" resultType="com.koreait.restapi.dto.MemberDTO">
+        SELECT * FROM member WHERE id = #{id};
+    </select>
+
+    <!-- 추가: 회원 정보 수정 (email만 수정 예시) -->
+    <update id="updateMember" parameterType="com.koreait.restapi.dto.MemberDTO">
+        UPDATE member
+        SET email = #{email}
+        WHERE id = #{id};
+    </update>
+</mapper>

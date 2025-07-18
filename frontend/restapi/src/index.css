@@ -1,0 +1,113 @@
+body {
+  font-family: "Segoe UI", "Malgun Gothic", Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  color: #222;
+}
+
+nav {
+  background: #3354db;
+  color: #fff;
+  padding: 14px 30px;
+  display: flex;
+  gap: 16px;
+  font-size: 1.08rem;
+}
+nav a,
+nav button {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+}
+nav a:hover,
+nav button:hover {
+  color: #ffd700;
+}
+
+h2 {
+  margin-top: 26px;
+  color: #1834a4;
+}
+form,
+.form-box {
+  background: #fff;
+  max-width: 360px;
+  margin: 24px auto;
+  padding: 24px 24px 14px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 18px 0 rgba(70, 90, 170, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+  padding: 9px;
+  border: 1px solid #dde2f3;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: #f7f8fa;
+  outline: none;
+  transition: border 0.2s;
+}
+input:focus,
+textarea:focus {
+  border: 1.5px solid #4a60e5;
+  background: #fff;
+}
+button {
+  background: #3354db;
+  color: #fff;
+  border: none;
+  padding: 8px 22px;
+  font-size: 1.05rem;
+  border-radius: 6px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #1834a4;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin: 24px 0 8px 0;
+  border-radius: 10px;
+  box-shadow: 0 1px 9px 0 rgba(60, 90, 160, 0.07);
+  overflow: hidden;
+}
+th,
+td {
+  border-bottom: 1px solid #e7ebf2;
+  padding: 10px 12px;
+  text-align: center;
+}
+th {
+  background: #f1f4fb;
+  color: #3b3e5a;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+tr:hover {
+  background: #f7faff;
+}
+
+div[role="alert"],
+.error-msg {
+  color: #d11a2e;
+  background: #ffe7ec;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 6px 0;
+  font-size: 0.98rem;
+}
